@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk"> 
+
+<head>
+    <meta charset="UTF-8">
+    <title>Шевченківська районна адміністрація - Зворотній звʼязок</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="heaedr projects-header">
+        <div class="logo_container">
+        <img src="img.png" alt="Логотип Шевченківської районної адміністрації" style="max-height: 50px; max-width: 50px;" />
+        <h1>Шевченківська районна адміністрація в місті Києві</h1>
+        </div>
+    </header>
+
+    <main class="feedback-main">
+        <div class="feedback-card">
+            <div class="feedback-header">
+                <h2>Форма зворотнього звʼязку</h2>
+                <p> Ми цінуємо Вашу думку. Заповніть форму нжче.</p>
+            </div>
+            <form action="#" method="post" class="feedback-form">
+                <fieldset class="form-section">
+                    <legend><b>Персональна інформація</b></legend>
+                    <div class="form-group">
+                        <label for="fullname">Прізвище та імʼя:</label><br>
+                        <input type="text" id="fullname" name="fullname" required placeholder="Петренко Петро">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" id="email" name="email" required placeholder="example@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Вік:</label><br>
+                        <input type="number" id="age" name="age" min="18" max="100">
+                    </div>
+                    <div class="form-group">
+                        <label class="group-label">Освіта:</label><br>
+                        <div class="radio-group">
+                            <label class="radio-option"><input type="radio" name="education" value="full">Повна</label>
+                            <label class="radio-option"><input type="radio" name="education" value="incomplete">Неповна</label>
+                            <label class="radio-option"><input type="radio" name="education" value="higher">Вища</label>
+                            <label class="radio-option"><input type="radio" name="education" value="vocational">Професійна</label>
+                        </div>
+                    </div>
+                    </fieldset>
+                    <div class="form-group">
+                        <label class="group-label">Мета зворотнього зв’язку:</label><br>
+                            <select id="purpose" name="purpose">
+                        <option value="cooperation">Співпраця</option>
+                        <option value="complaint">Скарга на порушення права власності</option>
+                        <option value="proposal">Пропозиція</option>
+                        <option value="bug">Наявність помилки</option>
+                    </select>
+                        </div>
+                    <div class="form-group">
+                        <label for="details">Детально (макс. 300 символів)</label><br>
+                        <textarea id="details" name="details" rows="5" maxlength="300" required placeholder="Опишіть питання..."></textarea>
+                    </div>
+                
+                <div class="form-group">
+                <input type="checkbox" id="consent" name="consent" >
+                <label for="consent">Я даю згоду на обробку персональних даних</label>
+            </div>
+            <p><button type="submit" class="btn-submit">Надіслати інформацію</button></p>
+            </form>
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #054585;">
+            <div class="back-button-container">
+            <a href="index.html" class="btn"> ⬅️ На головну сторінку</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p><b>Адреса:</b> м. Київ, вул. Богдана Хмельницького, 24 </p>
+        <p><b>Телефон:</b> +380 (44) 366-58-53</p>
+        <p>&copy; Шевченківська районна адміністрація 2026 </p>
+    </footer>
+</body>
+</html>
