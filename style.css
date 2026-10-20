@@ -1,0 +1,266 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(245, 247, 250);
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Georgia', serif;
+}
+
+#motto-container {
+    font-style: italic;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #054585; 
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"], input[type="email"], input[type="number"], select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+[class*="header"] {
+    background-color: #ffffff;
+    border-bottom: 2px solid #054585;
+}
+
+footer, header {
+    padding: 20px;
+}
+
+.sidebar ul li a { 
+    color: #054585;
+}
+
+header > .logo_container { 
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* index.html */
+
+.header {
+    position: relative; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    min-height: 80px;
+}
+
+.logo_container {
+    position: static; 
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo_container h1 {
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.nav_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.nav_buttons p {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.sidebar {
+    position: sticky;
+    top: 20px;
+    float: left;
+    width: 260px;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #054585;
+    margin-right: 20px;
+    z-index: 10;
+}
+
+article {
+    overflow: hidden;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    background: #fff;
+    border-radius: 6px;
+}
+
+section p:first-of-type::before {
+    content: "🇺🇦"; 
+}
+
+#leadership {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#leadership:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#leadership table {
+    display: block;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.footer p {
+    display: inline-block;
+    padding: 3px 6px;
+    border: 3px double transparent; 
+    transition: border-color 0s ease 3s;
+}
+
+.footer p:hover {
+    border-color: black; 
+}
+
+/* activities.html */
+
+.projects-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 20px;
+}
+
+.projects-header .logo_container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.activities-main {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.activities-card {
+    border-top: 2px dashed #800020;
+    border-right: 2px dashed #800020;
+    border-bottom: 2px dashed #800020;
+    border-left: 6px solid #800020;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 6px;
+}
+
+.activities-card p:last-child {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+.activities-card img {
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+}
+.activities-card img:hover {
+    filter: brightness(0.75);
+}
+
+.activities-card a:link, .navbar a:link {
+    color: darkgreen;
+}
+
+
+/*feedback.html */
+
+.feedback-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.feedback-card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-submit {
+    order: 2;
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #054585;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 5px;
+}
