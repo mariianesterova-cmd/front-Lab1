@@ -264,3 +264,18 @@ section p:first-of-type::before {
     gap: 15px;
     margin-top: 5px;
 }
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav_buttons, .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}

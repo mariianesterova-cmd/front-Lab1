@@ -166,3 +166,68 @@ function sortAndPrintGoals(arr) {
     console.table(result);
 }
 sortAndPrintGoals(users);
+
+// lab4
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // Випадаюче підменю
+    const btn = document.getElementById("activities-btn");
+    const menu = document.getElementById("dropdown-menu");
+
+    if (btn && menu) {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        });
+
+        window.addEventListener("click", (e) => {
+            if (!btn.contains(e.target) && !menu.contains(e.target)) {
+                menu.style.display = "none";
+            }
+        });
+    }
+
+    //  Карусель зображень
+    const carouselImages = document.querySelectorAll(".carousel-img");
+    if (carouselImages.length > 0) {
+        let currentImg = 0;
+        setInterval(() => {
+            carouselImages[currentImg].style.display = "none";
+            currentImg = (currentImg + 1) % carouselImages.length;
+            carouselImages[currentImg].style.display = "block";
+        }, 3000);
+    }
+
+    //  Пошук напряму діяльності за назвою
+    const searchInput = document.getElementById("searchInput");
+    if (searchInput) {
+        searchInput.addEventListener("input", () => {
+            let filter = searchInput.value.toLowerCase();
+            let items = document.querySelectorAll(".activity-item");
+            items.forEach(item => {
+                let text = item.textContent.toLowerCase();
+                item.style.display = text.includes(filter) ? "" : "none";
+            });
+        });
+    }
+
+    //  Підказка  для поля "Детально"
+    const detailsField = document.getElementById("details");
+    const tooltip = document.getElementById("tooltip");
+
+    if (detailsField && tooltip) {
+        detailsField.addEventListener("mouseover", () => {
+            detailsField.style.backgroundColor = "#eef6ff";
+            detailsField.style.border = "2px solid #054585";
+            detailsField.style.boxShadow = "0 0 8px rgba(5, 69, 133, 0.4)";
+            tooltip.style.display = "block";
+        });
+
+        detailsField.addEventListener("mouseout", () => {
+            detailsField.style.backgroundColor = "";
+            detailsField.style.border = "";
+            detailsField.style.boxShadow = "";
+            tooltip.style.display = "none";
+        });
+    }
+});

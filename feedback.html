@@ -57,9 +57,10 @@
                         <option value="bug">Наявність помилки</option>
                     </select>
                         </div>
-                    <div class="form-group">
+                    <div class="form-group" style="position: relative; display: block;">
                         <label for="details">Детально (макс. 300 символів)</label><br>
-                        <textarea id="details" name="details" rows="5" maxlength="300" required placeholder="Опишіть питання..."></textarea>
+                        <textarea id="details" name="details" rows="5" maxlength="300" required placeholder="Опишіть питання..." style="width: 100%; resize: vertical; box-sizing: border-box;"></textarea>
+                        <span id="tooltip" style="display: none; position: absolute; left: 102%; top: 30px; background: #333; color: #fff; padding: 6px 12px; border-radius: 4px; font-size: 12px; width: 220px; white-space: normal; z-index: 10; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">Вдячні за Ваш час! Конкретизуйте мету звернення, будь ласка</span>
                     </div>
                 
                 <div class="form-group">
@@ -80,5 +81,7 @@
         <p><b>Телефон:</b> +380 (44) 366-58-53</p>
         <p>&copy; Шевченківська районна адміністрація 2026 </p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

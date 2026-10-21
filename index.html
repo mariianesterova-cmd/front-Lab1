@@ -30,6 +30,18 @@
     
 
     <main>
+        <nav class="navbar">
+        <div class="dropdown" style="display: inline-block; position: relative;">
+            <a href="activities.html" id="activities-btn">Напрями діяльності ▼</a>
+            <div id="dropdown-menu" class="dropdown-content" style="display: none; position: absolute; top: 100%; left: 0; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); padding: 10px; z-index: 999; border-radius: 4px;">
+                <a href="activities.html#komunal" style="display: block; padding: 5px 0; color: #054585; text-decoration: none;">ЖКГ</a>
+                <a href="activities.html#osvita" style="display: block; padding: 5px 0; color: #054585; text-decoration: none;">Освіта</a>
+                <a href="activities.html#cnap" style="display: block; padding: 5px 0; color: #054585; text-decoration: none;">ЦНАП</a>
+            </div>
+        </div>
+        <br>
+        <a href="feedback.html">Зворотній зв’язок</a><br>
+    </nav>
         <hr style="margin: 20px 0; border: 0; border-top: 1px solid #054585;">
         <aside class="sidebar">
             <h4>Корисні ресурси</h4>
@@ -120,14 +132,13 @@
         </article>
     </main>
     <hr style="margin: 20px 0; border: 0; border-top: 1px solid #054585;">
-    <nav class="navbar">
-        <a href="activities.html">Напрями діяльності</a><br>
-        <a href="feedback.html">Зворотній зв’язок</a><br>
-    </nav>
+    
     <footer class="footer">
         <p tabindex="0"><b>Адреса:</b> м. Київ, вул. Богдана Хмельницького, 24 </p>
         <p tabindex="0"><b>Телефон:</b> +380 (44) 366-58-53</p>
         <p>&copy; Шевченківська районна адміністрація 2026 </p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
